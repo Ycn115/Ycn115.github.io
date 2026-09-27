@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ycn 的嵌入式与机器人项目作品集">
+  <meta name="theme-color" content="#10141b">
+  <title>Ycn | 嵌入式与机器人开发者</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="返回首页">
+        <span class="brand-mark">Y</span>
+        <span>Ycn115</span>
+      </a>
+      <nav class="nav" aria-label="主导航">
+        <a href="#projects">项目</a>
+        <a href="#stack">技术栈</a>
+        <a href="#path">实践路径</a>
+        <a class="nav-link" href="https://github.com/Ycn115" target="_blank" rel="noreferrer">GitHub ↗</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="pulse"></span> Embedded / Robotics / Hardware</p>
+          <h1>让感知、控制与执行<br><em>在真实设备上闭环。</em></h1>
+          <p class="hero-text">你好，我是 Ycn。专注于 STM32 嵌入式开发、机器人运动控制和传感器数据处理，喜欢把一条完整的数据链路落到可运行、可调试的设备上。</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">查看项目 <span>↓</span></a>
+            <a class="button button-ghost" href="https://github.com/Ycn115" target="_blank" rel="noreferrer">访问 GitHub <span>↗</span></a>
+          </div>
+          <div class="hero-facts" aria-label="方向概览">
+            <div><strong>STM32</strong><span>主控平台</span></div>
+            <div><strong>C / C++</strong><span>固件与控制</span></div>
+            <div><strong>从采集到执行</strong><span>完整链路</span></div>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="嵌入式系统数据流示意">
+          <div class="visual-topline">
+            <span>LIVE SYSTEM MAP</span>
+            <span class="status-dot">ONLINE</span>
+          </div>
+          <div class="system-map">
+            <div class="node node-sensor">
+              <span class="node-icon">S</span>
+              <small>INPUT</small>
+              <strong>传感器</strong>
+              <span>压力 / IMU / 视觉</span>
+            </div>
+            <div class="signal signal-a"><i></i><i></i><i></i></div>
+            <div class="node node-core">
+              <span class="node-icon">M</span>
+              <small>CONTROL</small>
+              <strong>STM32</strong>
+              <span>采集 / 解析 / 决策</span>
+            </div>
+            <div class="signal signal-b"><i></i><i></i><i></i></div>
+            <div class="node node-output">
+              <span class="node-icon">O</span>
+              <small>OUTPUT</small>
+              <strong>执行机构</strong>
+              <span>底盘 / 舵机 / BLE</span>
+            </div>
+          </div>
+          <div class="terminal">
+            <div><span class="terminal-prompt">$</span> system.status()</div>
+            <div class="terminal-success">✓ sensing ........ ready</div>
+            <div class="terminal-success">✓ control ........ ready</div>
+            <div class="terminal-success">✓ actuation ...... ready</div>
+          </div>
+          <div class="visual-label">感知 → 状态 → 控制 → 输出</div>
+        </div>
+      </section>
+
+      <section class="section intro-strip">
+        <div class="section-kicker">01 / FOCUS</div>
+        <div class="intro-content">
+          <h2>用工程方法，解决设备现场的问题。</h2>
+          <p>关注底层通信、实时数据处理、运动控制和任务状态机。项目文档强调输入、状态、输出与验证边界，方便复现和继续迭代。</p>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="section-heading">
+          <div>
+            <div class="section-kicker">02 / SELECTED WORK</div>
+            <h2>代表项目</h2>
+          </div>
+          <p class="section-note">两个公开仓库，覆盖机器人控制与智能传感。</p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card project-card-large">
+            <div class="project-visual robot-visual">
+              <div class="visual-caption">01 / MOBILE ROBOT</div>
+              <div class="robot-track"></div>
+              <div class="robot-body">
+                <span class="robot-top">STM32F407</span>
+                <span class="robot-wheel wheel-one"></span>
+                <span class="robot-wheel wheel-two"></span>
+                <span class="robot-wheel wheel-three"></span>
+                <span class="robot-wheel wheel-four"></span>
+              </div>
+              <span class="route route-one"></span>
+              <span class="route route-two"></span>
+              <span class="route route-three"></span>
+            </div>
+            <div class="project-content">
+              <div class="project-meta"><span>机器人控制</span><span>2025</span></div>
+              <h3>全向移动物流搬运机器人</h3>
+              <p>面向竞赛场景的 STM32F407 控制工程，串联麦克纳姆轮底盘、姿态反馈、多设备通信，以及抓取、搬运、码垛任务流程。</p>
+              <div class="tags">
+                <span>STM32F407</span><span>麦克纳姆轮</span><span>UART / DMA</span><span>PID</span>
+              </div>
+              <a class="text-link" href="https://github.com/Ycn115/enginer-train" target="_blank" rel="noreferrer">查看仓库 <span>↗</span></a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-visual insole-visual">
+              <div class="visual-caption">02 / SMART SENSING</div>
+              <div class="foot-grid" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span><span></span>
+              </div>
+              <div class="insole-label">18 POINTS<br><strong>PRESSURE MAP</strong></div>
+            </div>
+            <div class="project-content">
+              <div class="project-meta"><span>智能传感</span><span>2026</span></div>
+              <h3>STM32U575 智能足底压力鞋垫</h3>
+              <p>完成 18 点压力采集、COP 压力中心、MPU6050 姿态检测、步态融合和 JDY-23A 蓝牙数据上报。</p>
+              <div class="tags"><span>STM32U575</span><span>ADC</span><span>IMU</span><span>BLE</span></div>
+              <a class="text-link" href="https://github.com/Ycn115/STM32U575-Smart-Insole" target="_blank" rel="noreferrer">查看仓库 <span>↗</span></a>
+            </div>
+          </article>
+        </div>
+
+        <div class="other-projects">
+          <div class="other-title">其他公开项目</div>
+          <a href="https://github.com/Ycn115/vibe-workshop" target="_blank" rel="noreferrer"><span>vibe-workshop</span><small>HTML</small><b>↗</b></a>
+          <a href="https://github.com/Ycn115/openai-gemini" target="_blank" rel="noreferrer"><span>openai-gemini</span><small>JavaScript</small><b>↗</b></a>
+          <a href="https://github.com/Ycn115/app" target="_blank" rel="noreferrer"><span>app</span><small>TypeScript</small><b>↗</b></a>
+        </div>
+      </section>
+
+      <section class="section stack-section" id="stack">
+        <div class="section-heading">
+          <div>
+            <div class="section-kicker">03 / TOOLBOX</div>
+            <h2>技术栈</h2>
+          </div>
+          <p class="section-note">围绕“数据进入系统后如何变成可靠动作”。</p>
+        </div>
+        <div class="stack-grid">
+          <div class="stack-column">
+            <span class="stack-number">01</span>
+            <h3>底层与驱动</h3>
+            <p>STM32、GPIO、ADC、PWM、UART、DMA、定时器、中断</p>
+          </div>
+          <div class="stack-column">
+            <span class="stack-number">02</span>
+            <h3>控制与算法</h3>
+            <p>麦克纳姆轮运动学、PID、姿态闭环、压力分析、COP、步态融合</p>
+          </div>
+          <div class="stack-column">
+            <span class="stack-number">03</span>
+            <h3>通信与调试</h3>
+            <p>串口协议、帧解析、BLE CSV、串口屏、二维码、视觉模块联调</p>
+          </div>
+          <div class="stack-column">
+            <span class="stack-number">04</span>
+            <h3>工程工具</h3>
+            <p>STM32CubeMX、Keil MDK、GitHub、Draw.io、结构化项目文档</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section path-section" id="path">
+        <div class="section-heading">
+          <div>
+            <div class="section-kicker">04 / ENGINEERING PATH</div>
+            <h2>实践路径</h2>
+          </div>
+        </div>
+        <div class="path-list">
+          <div class="path-item">
+            <span class="path-line"></span>
+            <div class="path-index">01</div>
+            <div><h3>先把数据接进来</h3><p>从传感器、串口和 ADC 开始，明确帧格式、采样节奏与异常边界。</p></div>
+          </div>
+          <div class="path-item">
+            <span class="path-line"></span>
+            <div class="path-index">02</div>
+            <div><h3>再把状态说清楚</h3><p>将解析结果转换为可理解的状态、指标与任务阶段，减少模块之间的隐式耦合。</p></div>
+          </div>
+          <div class="path-item">
+            <span class="path-line"></span>
+            <div class="path-index">03</div>
+            <div><h3>最后让动作可验证</h3><p>把控制输出、超时、回退与调试记录连接起来，让设备行为可以复现和迭代。</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-band">
+        <div>
+          <div class="section-kicker">OPEN TO CONNECTIONS</div>
+          <h2>一起把想法落到硬件上。</h2>
+        </div>
+        <a class="button button-light" href="https://github.com/Ycn115" target="_blank" rel="noreferrer">在 GitHub 上联系我 <span>↗</span></a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>© 2026 Ycn115</span>
+      <span>Embedded systems · Robotics · Control</span>
+      <a href="#top">回到顶部 ↑</a>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
