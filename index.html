@@ -19,6 +19,7 @@
         <span>Ycn115</span>
       </a>
       <nav class="nav" aria-label="主导航">
+        <a href="#experience">经历</a>
         <a href="#projects">项目</a>
         <a href="#stack">技术栈</a>
         <a href="#path">实践路径</a>
@@ -31,14 +32,14 @@
         <div class="hero-copy">
           <p class="eyebrow"><span class="pulse"></span> Embedded / Robotics / Hardware</p>
           <h1>让感知、控制与执行<br><em>在真实设备上闭环。</em></h1>
-          <p class="hero-text">你好，我是 Ycn。专注于 STM32 嵌入式开发、机器人运动控制和传感器数据处理，喜欢把一条完整的数据链路落到可运行、可调试的设备上。</p>
+          <p class="hero-text">你好，我是 Ycn。专注于 STM32 嵌入式开发、机器人运动控制和车载通信，把采集、协议解析、状态判断与控制输出落到可运行、可调试的设备上。</p>
           <div class="hero-actions">
             <a class="button button-primary" href="#projects">查看项目 <span>↓</span></a>
             <a class="button button-ghost" href="https://github.com/Ycn115" target="_blank" rel="noreferrer">访问 GitHub <span>↗</span></a>
           </div>
           <div class="hero-facts" aria-label="方向概览">
-            <div><strong>STM32</strong><span>主控平台</span></div>
-            <div><strong>C / C++</strong><span>固件与控制</span></div>
+            <div><strong>STM32 / RTOS</strong><span>主控与任务调度</span></div>
+            <div><strong>UDS / CAN</strong><span>车载通信与诊断</span></div>
             <div><strong>从采集到执行</strong><span>完整链路</span></div>
           </div>
         </div>
@@ -84,14 +85,59 @@
         <div class="section-kicker">01 / FOCUS</div>
         <div class="intro-content">
           <h2>用工程方法，解决设备现场的问题。</h2>
-          <p>关注底层通信、实时数据处理、运动控制和任务状态机。项目文档强调输入、状态、输出与验证边界，方便复现和继续迭代。</p>
+          <p>从 MCU 外设、实时任务到车载网络与诊断，关注数据如何进入系统、如何变成状态，以及如何驱动可靠动作。</p>
+        </div>
+      </section>
+
+      <section class="section experience-section" id="experience">
+        <div class="section-heading">
+          <div>
+            <div class="section-kicker">02 / EXPERIENCE</div>
+            <h2>经历与成果</h2>
+          </div>
+          <p class="section-note">从车载网络到智能座舱，持续接触真实工程链路。</p>
+        </div>
+
+        <div class="experience-grid">
+          <div class="experience-list">
+            <article class="experience-item">
+              <div class="experience-meta"><span>2025.09—2025.12</span><span>四川宜云智联汽车科技创新中心</span></div>
+              <h3>嵌入式软件实习生</h3>
+              <p>参与基于 STM32H743 的车载网关固件开发：使用 lwIP / UDP 接收 ROS 上位机指令，经 FDCAN 下发底盘控制，并回传车辆状态。</p>
+              <div class="tags"><span>STM32H743</span><span>lwIP / UDP</span><span>uC/OS-III</span><span>FDCAN</span></div>
+            </article>
+            <article class="experience-item">
+              <div class="experience-meta"><span>2026.07—2026.10</span><span>吉利控股集团—领克汽车成都公司</span></div>
+              <h3>产品技术实习生 · 智能座舱方向</h3>
+              <p>使用 CANalyzer 分析总线报文，结合 DBC 定位通信异常；通过 UDS 读取电检 DOIP log，并参与 DHU / ADCU 固件刷写与 DU 号更新。</p>
+              <div class="tags"><span>UDS</span><span>CANalyzer</span><span>DBC</span><span>DHU / ADCU</span></div>
+            </article>
+          </div>
+
+          <aside class="profile-highlights">
+            <div class="highlight-item">
+              <span class="highlight-label">教育背景</span>
+              <strong>成都工业学院 · 车辆工程本科</strong>
+              <p>主修电工电子技术、嵌入式开发实践、汽车电子控制技术与车载网络技术。</p>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-label">竞赛成果</span>
+              <strong>工创赛 / 蓝桥杯 / 嵌入式芯片设计</strong>
+              <p>获得 2025 工创赛省二、2026 蓝桥杯嵌入式省二及 2026 嵌入式芯片与系统设计大赛西南赛区二等。</p>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-label">持续积累</span>
+              <strong>论文与创新项目</strong>
+              <p>录用学术论文 2 篇，并主持 1 项大学生创新创业训练项目。</p>
+            </div>
+          </aside>
         </div>
       </section>
 
       <section class="section" id="projects">
         <div class="section-heading">
           <div>
-            <div class="section-kicker">02 / SELECTED WORK</div>
+            <div class="section-kicker">03 / SELECTED WORK</div>
             <h2>代表项目</h2>
           </div>
           <p class="section-note">两个公开仓库，覆盖机器人控制与智能传感。</p>
@@ -118,7 +164,7 @@
               <h3>全向移动物流搬运机器人</h3>
               <p>面向竞赛场景的 STM32F407 控制工程，串联麦克纳姆轮底盘、姿态反馈、多设备通信，以及抓取、搬运、码垛任务流程。</p>
               <div class="tags">
-                <span>STM32F407</span><span>麦克纳姆轮</span><span>UART / DMA</span><span>PID</span>
+                <span>STM32F407</span><span>麦克纳姆轮</span><span>DMA / IDLE</span><span>PID</span>
               </div>
               <a class="text-link" href="https://github.com/Ycn115/enginer-train" target="_blank" rel="noreferrer">查看仓库 <span>↗</span></a>
             </div>
@@ -155,7 +201,7 @@
       <section class="section stack-section" id="stack">
         <div class="section-heading">
           <div>
-            <div class="section-kicker">03 / TOOLBOX</div>
+            <div class="section-kicker">04 / TOOLBOX</div>
             <h2>技术栈</h2>
           </div>
           <p class="section-note">围绕“数据进入系统后如何变成可靠动作”。</p>
@@ -164,7 +210,7 @@
           <div class="stack-column">
             <span class="stack-number">01</span>
             <h3>底层与驱动</h3>
-            <p>STM32、GPIO、ADC、PWM、UART、DMA、定时器、中断</p>
+            <p>STM32、C / C++、GPIO、ADC、PWM、UART、DMA、定时器、中断</p>
           </div>
           <div class="stack-column">
             <span class="stack-number">02</span>
@@ -174,12 +220,12 @@
           <div class="stack-column">
             <span class="stack-number">03</span>
             <h3>通信与调试</h3>
-            <p>串口协议、帧解析、BLE CSV、串口屏、二维码、视觉模块联调</p>
+            <p>UART、CAN / FDCAN、UDS、UDP / lwIP、BLE、DBC、CANalyzer</p>
           </div>
           <div class="stack-column">
             <span class="stack-number">04</span>
             <h3>工程工具</h3>
-            <p>STM32CubeMX、Keil MDK、GitHub、Draw.io、结构化项目文档</p>
+            <p>STM32CubeMX、Keil MDK、FreeRTOS、uC/OS-III、Git、Draw.io</p>
           </div>
         </div>
       </section>
@@ -187,7 +233,7 @@
       <section class="section path-section" id="path">
         <div class="section-heading">
           <div>
-            <div class="section-kicker">04 / ENGINEERING PATH</div>
+            <div class="section-kicker">05 / ENGINEERING PATH</div>
             <h2>实践路径</h2>
           </div>
         </div>
@@ -221,7 +267,7 @@
 
     <footer class="footer">
       <span>© 2026 Ycn115</span>
-      <span>Embedded systems · Robotics · Control</span>
+      <span>Embedded systems · Vehicle control · Robotics</span>
       <a href="#top">回到顶部 ↑</a>
     </footer>
   </div>
